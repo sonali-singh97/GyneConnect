@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!--  Fonts  -->
+
+        <!--    Bootstrap    -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+    </head>
+    
+    <body>
+        <div id="report-form">
+            <form id="report-form">
+
+                <label for="doctor-name"><b>Doctor Name</b></label>
+                <input type="text" placeholder="Enter the name of your doctor" name="doctor-name" required>
+
+                <label for="doctor-name"><b>Please enter your email to receive the status of your review</b></label>
+                <input name="email" type="email" placeholder="yourmail@example.com">
+
+                <label for="rate"><b>Please rate your doctor:</b></label>
+                <select id="rate" required>
+                    <option value="bad">1</option>
+                    <option value="poor">2</option>
+                    <option value="fair">3</option>
+                    <option value="good">4</option>
+                    <option value="excellent">5</option>
+                </select>
+
+                <label for="review">Additional comments:</label>
+                <textarea id="review" name="review" rows="5"> 
+                    Please tell us about your experience
+                </textarea>
+                <button type="submit">Send Review</button>
+
+            </form>
+        </div>
+    </body>
+</html>

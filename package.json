@@ -1,0 +1,16 @@
+{
+  "name": "gyneconnect",
+  "version": "1.0.0",
+  "description": "Web application to connect with Gynaecologists",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev" : "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

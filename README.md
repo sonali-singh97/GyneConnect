@@ -25,3 +25,4 @@ Start the server
 ```bash
   npm start
 ```
+Website is running on http://localhost:3000

@@ -11,23 +11,11 @@ body{
     font-size: 3vh;
 }
 
-.window-height{
-    height: 100vh;
-    padding: 0;
-    margin:0;
-    background-color: white;
-}
-
 .half-height{
     height: 50vh;
     padding: 0;
     margin:0;
     background-color: white;
-}
-
-.not-title{
-    width: 80vw;
-    margin-left: 10vw;
 }
 
 nav {
@@ -36,7 +24,7 @@ nav {
 }
 
 a {
-    color: #841934;
+    color: black;
 }
 
 a:hover {
@@ -47,22 +35,40 @@ a:hover {
     font-family: 'Brittany Signature Regular';
 }
 
-div a {
-    color: black;
-}
-
-div a:hover {
-    text-decoration:underline;
-    color: #841934;
-}
-
 #title{
     font-family: 'Brittany Signature Regular';
-    font-size: 15vh;
+    font-size: 10vh;
+    color: #FFC4EB;
 }
 
 .title{
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
+}
+
+#find-a-gynecologist-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    font-family: 'Brittany Signature Regular';
+    outline: 0;
+    border-width: 0 0 2px;
+    background: none;
+    width: 40vw;
+    line-height: 3vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem;
+}
+
+.profile {
+    background-color: #E1DABD;
+    border-radius: 10px;
 }

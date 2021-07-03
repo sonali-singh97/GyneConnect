@@ -1,43 +1,56 @@
-import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
 const DoctorSchema = new mongoose.Schema({
-    fullname :{
+    fullName: {
         type: String,
         required: true
     },
-    email : {
+    email: {
         type: String,
         required: true,
         unique: true
     },
-    gender : {
+    password: {
+        type: String,
+        required: true
+    },
+    gender: {
         type: String,
     },
-    location:{
+    hospitalName :{
+       type: String,
+       required: true
+    },
+    location: {
         type: String,
         required: true
     },
 
-    phone :{
+    phone: {
         type: String,
         required: true
     },
+    website: {
+        type: String,
+    },
 
-    password:{
-      type: String,
-      required: true
+    remarks: {
+        type: String
+    },
+    isVerified : {
+        type: Boolean,
+        default: false
     }
-},
-{
+
+}, {
     timestamps: true
 })
 
 DoctorSchema.methods.verifyPassword = async (inputPassword) => {
-return await bcrypt.compare(inputPassword, this.password);
+   return bcrypt.compare(inputPassword, this.password);
+    console.log(data)
+    return data;
 }
 
-
-const doctor = mongoose.model("Doctor", DoctorSchema)
-
-module.exports = doctor
+module.exports = mongoose.model("Doctor", DoctorSchema)

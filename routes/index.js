@@ -46,4 +46,11 @@ const {getAllDoctors, getProfile} = require('../controller/doctor')
     const doctor = await getProfile(req, res)
     res.render("find_a_doctor_full_profile", {doctor})
   } )
+
+  router.get('/book',  (req, res) => {
+    res.render('book')
+  })
+
+
+
   module.exports = router

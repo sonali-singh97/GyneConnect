@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Book an Appointment</title>
 
-        <!--  Fonts  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Book an Appointment</title>
 
-        <!--    Bootstrap    -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!--  Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="style/book_style.css"
+    <!--    Bootstrap    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-    </head>
-    <body>
-        <%-include("navbar")-%>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/book_style.css" </head> <body>
+    <%-include("navbar")-%>
 
-        <div id="status">
+    <div id="status">
         <h4>Status:</h4>
         <p>Here you can see the status of your appointment.</p>
-        </div>
+    </div>
 
-        <div id="selectors">
-            <form id = "book_appointment" >
-                <div class="appointment-type">
-                    <h4>Choose the type of consultation you would like to book:</h4>
-                    <input type="radio" name="meetType" value="online" id="online"><label for="online">Online Consultation</label>
-                    <input type="radio" name="meetType" value="offline" id="offline"><label for="offline">In-person Consultation</label>
-                </div>
+    <div id="selectors">
+        <form id="book_appointment">
+            <div class="appointment-type">
+                <h4>Choose the type of consultation you would like to book:</h4>
+                <input type="radio" name="meetType" value="online" id="online"><label for="online">Online
+                    Consultation</label>
+                <input type="radio" name="meetType" value="offline" id="offline"><label for="offline">In-person
+                    Consultation</label>
+            </div>
 
-                <div class="date">
-                    <h4>Choose a date for the consultation:</h4>
-                    <input type="radio" name="date" value="date1" id = "date1"><label for="date1">Date</label>
-                    <input type="radio" name="date" value="date2" id = "date2"><label for="date2">Date</label>
-                </div>
+            <div class="date">
+                <h4>Choose a date for the consultation:</h4>
+                <% for(let i =5; i<=13 ; i++) { %>
+                <input style="cursor:pointer;" type="radio" name="date" value="date<%- i %>" id="date<%- i %>"><label for="date<%- i %>">
+                    <%- i %> July 2021</label>
+                <%  } %>
+            </div>
 
-                <div class="time">
-                    <h4>Choose a time for the consultation:</h4>
-                    <input type="radio" name="time" value="time1" id = "time1"><label for="time1">Time</label>
-                    <input type="radio" name="time" value="time2" id = "time2"><label for="time2">Time</label>
-                </div>
+            <div class="time">
+                <h4>Choose a time for the consultation:</h4>
+                <% for(let i =9; i<=16 ;i++ ) { %>
+                <input style="cursor:pointer;" type="radio" name="time" value="time<%- i %>0" id="time<%- i %>0"><label for="time<%- i %>0">
+                    <%- i %>:00 </label>
+                <input style="cursor:pointer;" type="radio" name="time" value="time<%- i %>1" id="time<%- i %>1"><label for="time<%- i %>1">
+                    <%- i %>:15 </label>
+                <input style="cursor:pointer;" type="radio" name="time" value="timetime<%- i %>2" id="time<%- i %>2"><label for="time<%- i %>2">
+                    <%- i %>:30 </label>
+                <input style="cursor:pointer;" type="radio" name="time" value="timetime<%- i %>2" id="time<%- i %>3"><label for="time<%- i %>3">
+                    <%- i %>:45 </label>
+                <%  } %>
+            </div>
 
-                <button type="submit">Book</button>
-            </form>
-        </div>
+            <button type="submit">Book</button>
+        </form>
+    </div>
     </body>
+
 </html>

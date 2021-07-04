@@ -3,114 +3,111 @@
     <head>
         <meta charset="UTF-8">
 
+        <title>Home</title>
+
         <!--  Fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 
         <!--    Bootstrap    -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 
+        <!-- Styles -->
+        <link rel="stylesheet" href="style/main_style.css"/>
+
     </head>
     <body>
 
-        <div id="title">
+        <div class="window-height title" style="background-image:url(images/background_title.png);background-size: cover;">
             <h1 id="title">
-                GynaeConnect 
+                <span style="color: #841934">Gyne</span><span style="color: #ef6ebb">Connect</span> 
             </h1>
         </div>
 
-        <div id="main-text">
-            <p>
-                <!-- Need for finding trustworthy gynaecs in India... -->
+        <nav id = "navigation" class="col-md-12 nav nav-pills justify-content-center nav-fill sticky-top">
+            <a href="#" class="nav-item nav-link menu-item current">Home</a>
+            <a href="find_a_doctor.html" class="nav-item nav-link menu-item">Find a gynecologist</a>
+            <a href="review.html" class="nav-item nav-link menu-item">Review</a>
+            <a href="sign_up.html" class="nav-item nav-link menu-item">Sign up</a>
+            <a href="doctor_sign_up.html" class="nav-item nav-link menu-item">Sign up as a doctor</a>
+            <a href="resources.html" class="nav-item nav-link menu-item">Extra resources</a>
+            <a href="report.html" class="nav-item nav-link menu-item">Report a problem</a>
+        </nav>
+
+        <div id="main-text" class="window-height not-title">
+            <img src= "images/haiyya.png" title="Source: Haiyya" style="width:30vw; position:absolute">
+            <p style="margin-top:4vh; margin-left:30vw">
                 In India, sexual and reproductive health is centered around maternal care. In fact, the only time when most women have 
                 ever visited a gynecologist is when they are pregnant. Unmarried women are even more judged and shamed for their 
-                sexuality. A survey <a href="http://www.haiyya.in/our-works/health-over-stigma/">Health Over Stigma</a> conducted by the
-                Delhi-based Non Profit Organization <a href="http://www.haiyya.in">Haiyya</a> revealed that only 1% of women have received 
+                sexuality. <br/> A survey <a href="http://www.haiyya.in/our-works/health-over-stigma/">Health Over Stigma</a> conducted by the
+                Delhi-based Non Profit Organization <a href="http://www.haiyya.in">Haiyya</a> revealed that only <b>1%</b> of women have received 
                 information on sexual and reproductive health and rights (SRHR) from their mothers, doctors or government campaigns.
-                It showed that unmarried women are often denied services, misinformed or coerced into decisions. 95% of unmarried women had never
-                visited a gynaecologist to take consultation on sex, pleasure or contraception.
-                The stigma around reproductive and sexual health and well being only worsens in rural areas. A study by the 
+                It showed that unmarried women are often denied services, misinformed or coerced into decisions. <b>95%</b> of unmarried women had never
+                visited a gynecologist to take consultation on sex, pleasure or contraception.<br/>
+                
+            </p>
+            <p>
+                <br/>The stigma around reproductive and sexual health and well being only worsens in rural areas. A study by the 
                 <a href="https://www.ijcm.org.in/article.asp?issn=0970-0218;year=2003;volume=28;issue=2;spage=67;epage=67;aulast=kambo;type=0">Indian Council of Medical Research</a>
-                of 93,356 married women in rural areas showed that only 20.6% of women knew the availability of services for gynaecological
-                problems. Out of the 14.2% women who visited some health facility for their gynaecological problems only 9.8% 
-                felt satisfied with the availed services.
-                In India, unsafe abortions account for about <a href = "In India, unsafe abortions account for about 3,500 women dying every year. Abortion complications are the third major cause of maternal death, after haemorrhage and sepsis.">3,500</a> women dying every year. Abortion complications are the <a href=In India, unsafe abortions account for about 3,500 women dying every year. Abortion complications are the third major cause of maternal death, after haemorrhage and sepsis.>third major 
-                    cause</a> of maternal death, after haemorrhage and sepsis.
+                of <b>93,356</b> married women in rural areas showed that only <b>20.6%</b> of women knew the availability of services for gynecological
+                problems. Out of the <b>14.2%</b> women who visited some health facility for their gynecological problems only <b>9.8%</b> 
+                felt satisfied with the availed services. <br/>
+                In India, unsafe abortions account for about <b>3,500</b> women dying every year. Abortion complications are the <b>third</b> major 
+                cause of maternal death, after haemorrhage and sepsis.
                 And it goes without saying that the case is even <a href = "https://www.thehindu.com/sci-tech/health/problems-with-lgbtq-healthcare-access/article25284497.ece">worse</a> for members of the LGBTQ community. 
                 As studied by the <a href="https://data.unaids.org/publications/irc-pub02/jc587-india_en.pdf">UNAID</a>, there is also a staggering amount of Discrimination, Stigmatization
                 and Denial of health services to HIV/AIDS patients.
                 <br><br>
-                This is our attempt to help women from all parts of the country connect with trustworthy, respectful, well trained 
+                This is our attempt to help women from all parts of the country connect with <b>trustworthy, respectful, well-trained</b> 
                 gynecologists and get access to quality sexual and reproductive healthcare without any judgement.
-                
             </p>
         </div>
 
-        <div id="how-to-use">
-            <p>
-                <br><br>
-                Instructions for using GynaeConnect
+        <div id="how-to-use" class="window-height not-title">
+                <h2>
+                    Instructions for using 
+                    <span style="color: #841934; font-family:'Brittany Signature Regular'">Gyne</span>
+                    <span style="color: #ef6ebb;font-family:'Brittany Signature Regular'">Connect</span> 
+                </h2>
                 <br>
-                To find a gynec in your city, go to the Find a Doctor tab, enter your city, and choose one on the basis of the tags. To 
-                know what we mean by each, hover//or should we display somehwere else??????////////
-                To submit a review, sign in or sign up, and fill out the form on the Review tab. We sincerely request you to only fill This
-                form if you have actually consulted with the doctor and are of the opinion that the doctor is trustworthy, respectful, 
-                well trained and non-judgemental.
+            <p>
+                To find a gynecologist in your city, go to the <b><span style="color: #841934;">Find a gynecologist </span></b>tab, enter your city, and choose the most suitable doctor for you. <br/>
+                To help you make the best decision, we have provided a variety of <b>tags, information and reviews</b> of each of the doctors.<br/>
+                To submit a review, go to the <b><span style="color: #841934;">Review </span></b>tab. We encourage you to provide feedback for each of the appointments
+                you have made, so the reviews remain as accurate as possible. We sincerely request you to <b>only</b> fill this form if you have actually consulted with the doctor.<br/>
                 For an online consultation, you can book an appointment with one of the doctors who have registered on the website for a 
                 small fee (or for free for some doctors!) in one of the available time slots. However, it is strongly recommend you to use 
-                this service only in case of non-emergencies. 
-                If you find any discrepancies for any doctor listed here, fill the report form so that it can be rectified.
-
-                For Gynaecologists:
-                If you consider yourself to be one of the trustworthy, respectful, non-judgemental doctors here, please register on the 
-                doctor sign up page. You will be asked to enter some details, after which you will be thoroughly verified. Once verified,
-                your account will be created and you will receive an email, after which you can consult patients online for a small Fee of your choosing
-                at your preferred timings.
-
-
+                this service only in case of <b>emergencies</b>, as the physical examination would provide more accurate results. <br/>
+                If you find any discrepancies for any doctor listed here, fill the <b><span style="color: #841934;">Report</span></b> form so that it can be rectified.
+                <br/><br/>
+                <span style="color: #841934; font-family:'Brittany Signature Regular'">For Gynecologists:</span><br/>
+                If you consider yourself to be one of the <b>trustworthy, respectful, non-judgemental</b> doctors here, please register on the 
+                <b><span style="color: #841934;">Sign up as a doctor</span></b> page.<br/>
+                You will be asked to enter some details, after which you will be thoroughly <b>verified</b>. 
+                Once verified, your account will be created and you will receive an email, after which you can consult patients for a fee of your choosing at your preferred timings.
             </p>
         </div>
 
-        <div id="credits-disclaimers">
+        <div id="credits-disclaimers" class="half-height not-title">
+            <span style="color: #841934; font-family:'Brittany Signature Regular'"><h3>Sources</h3></span>
             <p>
-                <!-- <h3>Credits / Disclaimers</h3> -->
-                We have used the crowdsourced data collected by <a href="https://twitter.com/AmbaAzaad">Amba Azaad</a> as a starting point, after which add reviews submitted here. 
-                Many thanks to Amba and her team for collecting and compiling this <a href="https://docs.google.com/spreadsheets/d/1o2QJKrPjKS92cCj6SX73B8siKlW6TlRNKYe0SC7WrX8/edit#gid=1344865269">Crowdsourced List of Gynaecologists We Can Trust In India</a>.
-                Thank you to everyone who has submitted a gynaec review here!
+                We have used the crowdsourced data collected by <b><a href="https://twitter.com/AmbaAzaad">Amba Azaad</a></b> for the purposes of this website. <br/>
+                We would like to thank Amba and her team for collecting and compiling this 
+                <a href="https://docs.google.com/spreadsheets/d/1o2QJKrPjKS92cCj6SX73B8siKlW6TlRNKYe0SC7WrX8/edit#gid=1344865269"><b><span style="color: #841934;">
+                    Crowdsourced List of Gynaecologists We Can Trust In India
+                </span></b></a>.<br/>
+                All other sources are linked via hyperlinks in the webpage!<br/>
             </p>
+            <span style="color: #841934; font-family:'Brittany Signature Regular'"><h3>Disclaimers</h3></span>
+                The data contained here is <b>compiled</b> from reviews <b>submitted</b> by various users and,
+                while we are trying to keep the data accurate, we are not responsible for the accuracy of the data made available through this platform.
         </div>
 
-        <div id="visualization">
-            <p>
-                ***visualization***
-                <img src= "haiyya.png">
-                Obtained from haiyya
-            </p>
-        </div>
-
-        <div id="video">
+        <!--<div id="video" class="window-height not-title">
             <p>
             ***video***
             </p>
-        </div>
-
-        <div id="testimonials">
-            <h6>name1</h6>
-            <p>testimonial1</p>
-
-            <h6>name2</h6>
-            <p>testimonial2</p>
-
-            <h6>name3</h6>
-            <p>testimonial3</p>
-        </div>
-        <div id="credits-disclaimers">
-            <p>
-                <h5>Disclaimers</h5>
-                The data contained here is compiled from reviews submitted by various users and 
-                therefore we are not responsible for the accuracy of the data made available through this
-                platform.
-
-            </p>
-        </div>
-
+        </div>-->
     </body>
 </html>

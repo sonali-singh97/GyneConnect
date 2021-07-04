@@ -4,39 +4,51 @@
         <meta charset="UTF-8">
 
         <!--  Fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 
         <!--    Bootstrap    -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style/find_style.css"/>
 
     </head>
 
     <body>
+        <nav id = "navigation" class="col-md-12 nav nav-pills justify-content-center nav-fill sticky-top">
+            <a href="main.html" class="nav-item nav-link menu-item">Home</a>
+            <a href="#" class="nav-item nav-link menu-item current">Find a gynecologist</a>
+            <a href="review.html" class="nav-item nav-link menu-item">Review</a>
+            <a href="sign_up.html" class="nav-item nav-link menu-item">Sign up</a>
+            <a href="doctor_sign_up.html" class="nav-item nav-link menu-item">Sign up as a doctor</a>
+            <a href="resources.html" class="nav-item nav-link menu-item">Extra resources</a>
+            <a href="report.html" class="nav-item nav-link menu-item">Report a problem</a>
+        </nav>
 
-        <div id="title">
-            <h1 id="page-title">
-                Find a gynecologist 
+        <div class="half-height title" style="background-image:url(images/background_find.png);background-size: cover;">
+            <h1 id="title">
+                Find a gynecologist
             </h1>
         </div>
 
-        <div id="find-a-gynecologist">
+        <div style="margin-top: 4vh; margin-bottom: 4vh;">
             <form id="find-a-gynecologist-form">
-            <label for="city">Please enter your city:</label>
-            <input type="text" id="city" name="city"><br>
+                <label for="city">Please enter your city:</label>
+                <input type="text" id="city" name="city"><br>
             </form>
         </div>
 
-        <div id="gynecologist-profile-list">
-            <div id="profile">
-                <h6 id="profile-name">Name</h6>
-                <p id="profile-number-reviews">Number of reviews</p>
-                <p id="profile-gender">Gender</p>
-                <p id="profile-phone">Phone</p>
-                <p id="profile-email">Email</p>
-                <p id="profile-location">Location</p>
-                <p id="profile-hours">Office hours</p>
-                <p id="profile-fees">Fees</p>
-                {% comment %} book button {% endcomment %}
+        
+
+        <div id="gynecologist-profile-list" class="grid">
+            <div class="profile">
+                <h3 id="name">...</h3>
+                <p id="numberReviews">...</p>
+                <p id="tags">...</p>
             </div>
+            
         </div>
 
     </body>

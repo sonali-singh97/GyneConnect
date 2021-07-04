@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname, "public")))
 app.use(errorHandler);
 
 // Routes
+app.use("/appointment", require('./routes/appointment'))
 app.use('/auth', require('./routes/auth'))
 app.use('/', require('./routes/index'))
 

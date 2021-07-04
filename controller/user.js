@@ -1,52 +1,41 @@
 const asyncHandler = require("express-async-handler")
-const Doctor = require("../models/doctorModel")
+const User = require("../models/user")
 const bcrypt = require("bcryptjs")
 const generateToken = require("../utilities/generateToken");
 const {LocalStorage} = require("node-localstorage");
 
 localStorage = new LocalStorage('./scratch'); 
 
-// @desc Register Doctor
-// @route POST /api/doctors/signup
+// @desc Register User
+// @route POST /auth/user/signup
 // @Access Public
-const registerDoctor = asyncHandler(async (req, res) => {
+const registerUser = asyncHandler(async (req, res) => {
     console.log("request")
     const {
         fullName,
         email,
         password,
-        gender,
-        hospitalName,
-        location,
-        phone,
-        website,
-        remarks
     } = req.body;
 
-    const doctor = await Doctor.findOne({
+    const user = await User.findOne({
         email
     });
-    if (doctor) {
+
+    if (user) {
         res.status(422).json({
-            msg: "Doctor already exists in database"
+            msg: "User already exists in database"
         })
     } else {
         const hashedPassword = await bcrypt.hash(password, 12)
    
-        const newDoctor = new Doctor({
+        const newUser = new User({
             fullName,
             email,
             password : hashedPassword,
-            gender,
-            hospitalName,
-            location,
-            phone,
-            website,
-            remarks
         });
 
         try {
-            const result = await newDoctor.save();
+            const result = await newUser.save();
             res.status(200).render('index', {
                 result
             })
@@ -56,21 +45,20 @@ const registerDoctor = asyncHandler(async (req, res) => {
     }
 });
 
-// @desc Login Doctor
-// @route POST /api/doctors/login
+// @desc Login User
+// @route POST /auth/uer/login
 // @Access Public
-  const loginDoctor = asyncHandler(async (req, res) => {
+const loginUser = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
   
-    const doctor = await Doctor.findOne({ email });
+    const user = await User.findOne({ email });
     
-    if (doctor && (await bcrypt.compare(password, doctor.password))) {
-        const jwt_token = "Bearer " + generateToken(doctor._id)
+    if (user && (await bcrypt.compare(password, user.password))) {
+        const jwt_token = "Bearer " + generateToken(user._id)
         localStorage.setItem("jwt", jwt_token);
         res.status(200).json({
-        fullname: doctor.fullname,
-        email: doctor.email,
-        isVerified: doctor.isVerified,
+        fullname: user.fullname,
+        email: user.email,
         token: jwt_token,
       });
     } else {
@@ -79,16 +67,16 @@ const registerDoctor = asyncHandler(async (req, res) => {
     }
   });
 
-// @desc Logout Doctor
-// @route GET /api/doctors/login
+// @desc Logout User
+// @route GET /auth/users/logout
 // @Access Private
-const logoutDoctor = asyncHandler(async (req, res) => {
+const logoutUser = asyncHandler(async (req, res) => {
     localStorage.removeItem("jwt");
     res.status(200).render("index")
   });
 
 module.exports={
-    registerDoctor,
-    loginDoctor,
-    logoutDoctor
+    registerUser,
+    loginUser,
+    logoutUser
 }

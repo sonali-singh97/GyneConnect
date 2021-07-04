@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-//const { ObjectId } = mongoose.Schema.Types;
+const { ObjectId } = mongoose.Schema.Types;
 
 const DoctorSchema = new mongoose.Schema({
     fullName: {
@@ -56,8 +56,18 @@ const DoctorSchema = new mongoose.Schema({
     },
 
     reviews :[String],
-    tags :[String]
-
+    tags :[String],
+    timeSlots:[{ 
+        date: Date,
+        startTime: String,
+        available: {
+            type: Boolean,
+            default: true
+        },
+        patientId : {
+            type: ObjectId,
+            ref: "User"
+        }}]
 }, {
     timestamps: true
 })

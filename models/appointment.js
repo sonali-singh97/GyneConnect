@@ -6,13 +6,14 @@ const AppointmentSchema = new mongoose.Schema({
         required: true,
         ref: "Doctor",
     },
-
+    
     patientId: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "User",
     },
-    day:{
+
+    date:{
       type: Date,
       required: true
     },
@@ -24,7 +25,7 @@ const AppointmentSchema = new mongoose.Schema({
 
     duration: {
         type: String,
-        required: true
+        default: "15"
     },
     status: {
         type: Boolean,

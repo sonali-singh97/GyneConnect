@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+//const { ObjectId } = mongoose.Schema.Types;
 
 const DoctorSchema = new mongoose.Schema({
     fullName: {
@@ -7,10 +8,18 @@ const DoctorSchema = new mongoose.Schema({
     },
 
     userType: {
-     type: String,
-     default: "doctor"
+        type: String,
+        default: "doctor"
     },
 
+    image: {
+        type: String,
+        default: "https://res.cloudinary.com/talk-amigo/image/upload/v1625387829/GyneConnect/GyneConnect_vzcnxr.jpg"
+    },
+
+    startTime: String,
+    endTime:String,
+    fees: String,
     email: {
         type: String,
         required: true,
@@ -20,12 +29,12 @@ const DoctorSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    gender: {
+
+    gender:String,
+
+    hospitalName: {
         type: String,
-    },
-    hospitalName :{
-       type: String,
-       required: true
+        required: true
     },
     location: {
         type: String,
@@ -36,18 +45,19 @@ const DoctorSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    website: {
-        type: String,
-    },
 
-    remarks: {
-        type: String
-    },
-    isVerified : {
+    website:String,
+
+    remarks: String,
+
+    isVerified: {
         type: Boolean,
         default: false
-    }
-    
+    },
+
+    reviews :[String],
+    tags :[String]
+
 }, {
     timestamps: true
 })

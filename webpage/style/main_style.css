@@ -91,3 +91,17 @@ div a:hover {
     font-size:2vh;
     border: 1px solid #841934;
 }
+
+footer {
+    height: 16vw;
+    padding: 3vw;
+    background-color: #FFE4FA;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 200;
+}
+
+h4{
+    font-family: 'Brittany Signature Regular';
+}

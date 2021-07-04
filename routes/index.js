@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { ensureAuth, ensureGuest } = require('../middlewares/authMiddleware')
-const {getAllDoctors} = require('../controller/doctor')
+const {getAllDoctors, getProfile} = require('../controller/doctor')
 
 // @desc    Login/Landing page
 // @route   GET /
@@ -11,7 +11,6 @@ const {getAllDoctors} = require('../controller/doctor')
 
   router.get('/find_a_doctor', ensureGuest, async(req, res) => {
     const doctors = await getAllDoctors()
-   console.log(doctors)
     res.render('find_a_doctor', {doctors})
   })
 
@@ -42,4 +41,9 @@ const {getAllDoctors} = require('../controller/doctor')
   router.get('/doctor_login', ensureGuest, (req, res) => {
     res.render('doctor_log_in')
   })
+
+  router.get('/doctor/:id',async (req, res)=>{
+    const doctor = await getProfile(req, res)
+    res.render("find_a_doctor_full_profile", {doctor})
+  } )
   module.exports = router

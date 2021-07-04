@@ -13,30 +13,30 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="style/full_profile_style.css"
+        <link rel="stylesheet" href="/style/full_profile_style.css"
 
     </head>
     <body>
         <%-include("navbar")-%>
         <div id="profile">
-            <img src="images/logo.jpeg" alt="Profile picture"/><br/>
-            <h2 id="name"><b>Name</b></h2> <br/>
+            <img src="<%- doctor.image %>" alt="Profile picture"/><br/>
+            <h2 id="name"><b>Full Name : </b><%- doctor.fullName %></h2> <br/>
 
-            <p id="email"><b>Email</b></p> <br/>
+            <p id="email"><b> Email : </b><%- doctor.email %></p> <br/>
 
-            <p id="gender"><b>Gender</b></p> <br/>
+            <p id="gender"><b>Gender : </b><%- doctor.gender %></p> <br/>
 
-            <p id="location"><b>Location</b></p> <br/>
+            <p id="location"><b>Location; <%- doctor.location %></p> <br/>
 
-            <p id="hospitalName"><b>Hospital</b></p> <br/>
+            <p id="hospitalName"><b>Hospital Name: </b><%- doctor.hospitalName %></p> <br/>
 
-            <p id="phone"><b>Phone number:</b></p> <br/>
+            <p id="phone"><b>Phone number: </b> <%- doctor.phone%></p> <br/>
 
-            <p id="website"><b>Website</b></p> <br/>
+            <p id="website"><b> Address: </b> <%- doctor.address %> </p> <br/>
                 
-            <p id="fee"><b>Consultation fee</b></p> <br/>
+            <p id="fee"><b>Consultation fee: </b> <%- doctor.fees %></p> <br/>
 
-            <a href="book.html" style="color: #841934; font-family:'Brittany Signature Regular'">Book an Appointment</a> 
+            <!-- <a href="book.html" style="color: #841934; font-family:'Brittany Signature Regular'">Book an Appointment</a>  -->
         </div>
 
     </body>

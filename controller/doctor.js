@@ -89,7 +89,7 @@ const logoutDoctor = asyncHandler(async (req, res) => {
   });
 
 
-//   const addDoctor =async ()=> {
+  const addDoctor =async ()=> {
 //   const data = Object.entries(doctors_data[0]);
 //   const req ={};
 //   req.body ={};
@@ -110,7 +110,7 @@ const logoutDoctor = asyncHandler(async (req, res) => {
 
 //  }
 
-// }
+}
 module.exports={
     registerDoctor,
     loginDoctor,

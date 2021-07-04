@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Find a Gynecologist</title>
+
+        <!--  Fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+        <!--    Bootstrap    -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style/find_style.css"/>
+
+    </head>
+
+    <body>
+        <%-include("navbar")-%>
+
+        <div class="half-height title" style="background-image:url(images/background_find.png);background-size: cover;">
+            <h1 id="title">
+                Find a gynecologist
+            </h1>
+        </div>
+
+        <div style="margin-top: 4vh; margin-bottom: 4vh;">
+            <form id="find-a-gynecologist-form">
+                <label for="city">Please enter your city:</label>
+                <input type="text" id="city" name="city"><br>
+            </form>
+        </div>
+
+        <div id="gynecologist-profile-list" class="grid">
+            <div class="profile">
+                <img src="images/logo.jpeg" alt="profile image" class="profile-image"/><br/>
+                <h3 id="name">Name</h3><br/>
+                <p id="numberReviews">Reviews</p><br/>
+                <p id="tags">Tags</p>
+                <a href="find_a_doctor_full_profile.html" style="color: #841934">Learn more</a> 
+            </div>
+
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Report</title>
+        <!--  Fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+        <!--    Bootstrap    -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="style/report_style.css"
+    </head>
+    
+    <body>
+        <%-include("navbar")-%>
+        <div id="report-form" class="centered-box">
+            <form id="report-form">
+
+                <label for="doctorName"><b>Doctor Name</b></label> <br/>
+                <input type="text" placeholder="Enter the name of the doctor you want to report about" name="doctorName" required> <br/>
+
+                <label for="issue"><b>Please describe the issue:</b></label> <br/>
+                <textarea id="issue" name="issue" rows="3" style="width:30vw" required>Write the description of the issue here
+                </textarea><br/>
+
+                <button type="submit">Send Report</button>
+
+            </form>
+        </div>
+    </body>
+</html>

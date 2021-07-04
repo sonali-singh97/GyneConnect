@@ -36,9 +36,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
         try {
             const result = await newUser.save();
-            res.status(200).render('index', {
-                result
-            })
+            res.status(200).redirect('/login')
         } catch (err) {
             res.status(500).send(err)
         }
@@ -56,11 +54,7 @@ const loginUser = asyncHandler(async (req, res) => {
     if (user && (await bcrypt.compare(password, user.password))) {
         const jwt_token = "Bearer " + generateToken(user._id)
         localStorage.setItem("jwt", jwt_token);
-        res.status(200).json({
-        fullname: user.fullname,
-        email: user.email,
-        token: jwt_token,
-      });
+        res.status(200).redirect("/");
     } else {
       res.status(401);
       throw new Error("Invalid email or password !!");
@@ -72,7 +66,7 @@ const loginUser = asyncHandler(async (req, res) => {
 // @Access Private
 const logoutUser = asyncHandler(async (req, res) => {
     localStorage.removeItem("jwt");
-    res.status(200).render("index")
+    res.status(200).redirect("/")
   });
 
 module.exports={

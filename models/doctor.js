@@ -22,12 +22,10 @@ const DoctorSchema = new mongoose.Schema({
     fees: String,
     email: {
         type: String,
-        required: true,
         unique: true
     },
     password: {
         type: String,
-        required: true
     },
 
     gender:String,

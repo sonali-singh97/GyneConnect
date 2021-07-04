@@ -3,6 +3,8 @@ const Doctor = require("../models/doctor")
 const bcrypt = require("bcryptjs")
 const generateToken = require("../utilities/generateToken");
 const {LocalStorage} = require("node-localstorage");
+const doctors_data = require("../doctors_data");
+const axios = require("axios")
 
 localStorage = new LocalStorage('./scratch'); 
 
@@ -47,9 +49,7 @@ const registerDoctor = asyncHandler(async (req, res) => {
 
         try {
             const result = await newDoctor.save();
-            res.status(200).render('index', {
-                result
-            })
+            res.status(200).redirect("/")
         } catch (err) {
             res.status(500).send(err)
         }
@@ -67,12 +67,13 @@ const registerDoctor = asyncHandler(async (req, res) => {
     if (doctor && (await bcrypt.compare(password, doctor.password))) {
         const jwt_token = "Bearer " + generateToken(doctor._id)
         localStorage.setItem("jwt", jwt_token);
-        res.status(200).json({
-        fullname: doctor.fullname,
-        email: doctor.email,
-        isVerified: doctor.isVerified,
-        token: jwt_token,
-      });
+    //     res.status(200).json({
+    //     fullname: doctor.fullname,
+    //     email: doctor.email,
+    //     isVerified: doctor.isVerified,
+    //     token: jwt_token,
+    //   });
+    res.status(200).redirect("/doctor-login")
     } else {
       res.status(401);
       throw new Error("Invalid email or password !!");
@@ -84,11 +85,37 @@ const registerDoctor = asyncHandler(async (req, res) => {
 // @Access Private
 const logoutDoctor = asyncHandler(async (req, res) => {
     localStorage.removeItem("jwt");
-    res.status(200).render("index")
+    res.status(200).redirect("/")
   });
 
+
+//   const addDoctor =async ()=> {
+//   const data = Object.entries(doctors_data[0]);
+//   const req ={};
+//   req.body ={};
+//   req.body.tags=[]
+//   for(i =0; i <20; i++) {
+//   data.forEach((ele, index)=>{
+//   // console.log(ele[0])
+//    const val= Object.values(ele[1])
+//   // console.log(val[i])
+//   if(ele[0].startsWith("TAG")){
+//       req.body.tags.push(ele[0])
+//   }
+//    req.body[ele[0]] = val[i];
+//   })
+
+//   console.log(req)
+//   const res = await axios.post("/auth/register/doctor", req)
+
+//  }
+
+// }
 module.exports={
     registerDoctor,
     loginDoctor,
-    logoutDoctor
+    logoutDoctor,
+    addDoctor
 }
+
+

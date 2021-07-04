@@ -1,0 +1,49 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+     "responses": ["I can answer any sexual and reproductive health questions that you might have"],
+     "context": [""]
+    },
+    {"tag":"hiv" ,
+        "patterns": ["How do people get HIV?"],
+        "responses": ["A person gets HIV when an infected person's body fluids (blood, semen, fluids from the vagina, or breast milk) enter their bloodstream. The virus can enter the blood through linings in the mouth, anus, or sex organs (the penis and vagina), or through broken skin."],
+        "context": [""]
+    },   
+    {"tag":"syphillis" ,
+        "patterns": ["Can a person with syphilis spread the disease?"],
+        "responses": ["Yes. Syphilis is a sexually transmitted disease. A person with syphilis can spread the infection during the first two stages of the disease. If you come in contact with an open sore (first stage) or skin rash (second stage), you can pick up the bacteria that cause the infection. If the bacteria enter your body through an opening such as the penis, anus, vagina, mouth, or broken skin, you can get syphilis."],
+        "context": [""]
+    },   
+    {"tag": "discharge",
+        "patterns": ["Is vaginal discharge normal?"],
+        "responses": ["A woman normally produces a vaginal discharge that usually is described as clear or slightly cloudy, non-irritating, and odor-free. During the normal menstrual cycle, the amount and consistency of discharge can vary. At one time of the month, there may be a small amount of a very thin or watery discharge; and at another time, a more extensive thicker discharge may appear. All of these excretions could be considered normal."],
+        "context": [""]
+    },   
+    {"tag":"pap" ,
+        "patterns": ["How often should a woman get a pelvic exam and Pap test?"],
+        "responses": ["A Pap test is recommended for women age 21 and older. The American College of Obstetrics and Gynecology recommends routine screening for women ages 21 to 65 years every three years. More frequent Pap tests may be needed if an abnormal test result is found or if you are at high risk of cervical cancer."],
+        "context": [""]
+    }
+
+]
+}

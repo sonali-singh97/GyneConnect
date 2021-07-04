@@ -8,7 +8,7 @@
     }
 
 body{
-    background-color: #E1DABD;
+    background-color: #FFE4FA;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 3vh;
 }
@@ -41,7 +41,7 @@ a:hover {
     height: 130vh;
     border-radius: 20px;
     background-color: white;
-    border: 10px solid #FFE4FA;
+    border: 10px solid #841934;
     line-height: 5vh;
 }
 
@@ -57,5 +57,5 @@ button {
 }
 
 button:hover {
-    color: #E1DABD;
+    color: #FFC4EB;
 }

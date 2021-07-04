@@ -1,11 +1,16 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
 
 const DoctorSchema = new mongoose.Schema({
     fullName: {
         type: String,
         required: true
     },
+
+    userType: {
+     type: String,
+     default: "doctor"
+    },
+
     email: {
         type: String,
         required: true,
@@ -42,15 +47,11 @@ const DoctorSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
-
+    
 }, {
     timestamps: true
 })
 
-DoctorSchema.methods.verifyPassword = async (inputPassword) => {
-   return bcrypt.compare(inputPassword, this.password);
-    console.log(data)
-    return data;
-}
+
 
 module.exports = mongoose.model("Doctor", DoctorSchema)

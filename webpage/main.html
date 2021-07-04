@@ -3,6 +3,18 @@
     <head>
         <meta charset="UTF-8">
 
+        <script>
+        function showFunction() {
+            var chatbot = document.getElementById("chatbotBox");
+            if (chatbot.style.visibility === "hidden") {
+                chatbot.style.visibility = "visible";
+            } 
+            else {
+                chatbot.style.visibility = "hidden";
+            } 
+        }
+        </script>
+
         <title>Home</title>
 
         <!--  Fonts  -->
@@ -34,9 +46,15 @@
             <a href="report.html" class="nav-item nav-link menu-item">Report a problem</a>
         </nav>
 
+        <div id = "chatbotBox">
+            <h6 style="font-size: 3vh; margin: 0 auto;">Chatbot</h6>
+            <hr/>
+        </div>
+        <img id="chatbotButton" src="images/chatbot.png" style="width:5vw; height: 5vw;" onclick="showFunction()"/>
+
         <div id="main-text" class="window-height not-title">
             <img src= "images/haiyya.png" title="Source: Haiyya" style="width:30vw; position:absolute">
-            <p style="margin-top:4vh; margin-left:30vw">
+            <p style=" margin-left:30vw">
                 In India, sexual and reproductive health is centered around maternal care. In fact, the only time when most women have 
                 ever visited a gynecologist is when they are pregnant. Unmarried women are even more judged and shamed for their 
                 sexuality. <br/> A survey <a href="http://www.haiyya.in/our-works/health-over-stigma/">Health Over Stigma</a> conducted by the

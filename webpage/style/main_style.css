@@ -66,3 +66,28 @@ div a:hover {
     justify-content: center;
     align-items: center;
 }
+
+#chatbotButton {
+    position: sticky;
+    left: 90vw;
+    top: 85vh;
+    background-color: white;
+    border-radius: 20%;
+    z-index: 101;
+}
+
+#chatbotBox {
+    z-index: 100;
+    position: fixed;
+    visibility: hidden;
+    left: 75vw;
+    top: 40vh;
+    height: 50vh;
+    width: 20vw;
+    background-color: #FFE4FA;
+    border-radius: 10%;
+    text-align: center;
+    padding-top: 1vh;
+    font-size:2vh;
+    border: 1px solid #841934;
+}

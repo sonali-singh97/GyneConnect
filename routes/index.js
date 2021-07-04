@@ -1,17 +1,18 @@
 const express = require('express')
 const router = express.Router()
 const { ensureAuth, ensureGuest } = require('../middlewares/authMiddleware')
-const { addDoctor} = require("../controller/doctor")
+const {getAllDoctors} = require('../controller/doctor')
 
-addDoctor();
 // @desc    Login/Landing page
 // @route   GET /
   router.get('/', ensureGuest, (req, res) => {
     res.render('index')
   })
 
-  router.get('/find_a_doctor', ensureGuest, (req, res) => {
-    res.render('find_a_doctor')
+  router.get('/find_a_doctor', ensureGuest, async(req, res) => {
+    const doctors = await getAllDoctors()
+   console.log(doctors)
+    res.render('find_a_doctor', {doctors})
   })
 
   router.get('/review', ensureGuest, (req, res) => {

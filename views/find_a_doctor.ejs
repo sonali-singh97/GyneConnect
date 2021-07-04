@@ -34,12 +34,22 @@
         </div>
 
         <div id="gynecologist-profile-list" class="grid">
+            <% if(doctors.length>0) {%>
+                <% doctors.forEach(function(doctor){ %>  
+
             <div class="profile">
-                <img src="images/logo.jpeg" alt="profile image" class="profile-image"/><br/>
-                <h3 id="name">Name</h3><br/>
-                <p id="numberReviews">Reviews</p><br/>
-                <p id="tags">Tags</p>
+                <img src=" <%- doctor.image %>" alt="profile image" class="profile-image"/><br/>
+                <h3 id="name"><%- doctor.fullName %></h3><br/>
+                <p id="numberReviews"><%- doctor.location%></p><br/>
+                <p id="tags">
+                    <% doctor.tags.forEach(function(tag){ %>  
+                        <%- tag %>,
+                    <% }); %>
+                </p>
                 <a href="find_a_doctor_full_profile.html" style="color: #841934">Learn more</a> 
+            </div>
+            <% }); %>
+            <% } %>
             </div>
 
     </body>

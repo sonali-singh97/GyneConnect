@@ -2711,7 +2711,7 @@ module.exports = [{
         "448": "(213) 740-3563",
         "449": "022 321 07 45 "
     },
-    "Address": {
+    "address": {
         "0": "Fenway Health 1340 Boylston St, Boston, MA 02215",
         "1": "404 N Keene St Ste 3\nColumbia, MO 65201",
         "2": null,
@@ -3163,7 +3163,7 @@ module.exports = [{
         "448": "USC Engemann Student Health Center\n1031 W 34th St\nLos Angeles, CA 90089",
         "449": "Place des Philosophes 18\n1205 Gen\u00e8ve, Switzerland"
     },
-    "Office Hours": {
+    "officeHours": {
         "0": null,
         "1": "8-5, M-F",
         "2": null,
@@ -7683,7 +7683,7 @@ module.exports = [{
         "448": null,
         "449": "24, heterosexual,unmarried, sexually active"
     },
-    "Testimonial": {
+    "reviews": {
         "0": null,
         "1": null,
         "2": null,

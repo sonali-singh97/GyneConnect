@@ -19,11 +19,9 @@ const DoctorSchema = new mongoose.Schema({
 
     startTime: String,
     endTime:String,
+    officeHours: String,
     fees: String,
-    email: {
-        type: String,
-        unique: true
-    },
+    email: String,
     password: {
         type: String,
     },
@@ -32,16 +30,16 @@ const DoctorSchema = new mongoose.Schema({
 
     hospitalName: {
         type: String,
-        required: true
     },
     location: {
         type: String,
-        required: true
+    },
+    address: {
+        type: String,
     },
 
     phone: {
         type: String,
-        required: true
     },
 
     website:String,

@@ -3,6 +3,18 @@
     <head>
         <meta charset="UTF-8">
 
+        <script>
+        function showFunction() {
+            var chatbot = document.getElementById("chatbotBox");
+            if (chatbot.style.visibility === "hidden") {
+                chatbot.style.visibility = "visible";
+            } 
+            else {
+                chatbot.style.visibility = "hidden";
+            } 
+        }
+        </script>
+
         <title>Home</title>
 
         <!--  Fonts  -->
@@ -30,14 +42,26 @@
             <a href="find_a_doctor.html" class="nav-item nav-link menu-item">Find a gynecologist</a>
             <a href="review.html" class="nav-item nav-link menu-item">Review</a>
             <a href="sign_up.html" class="nav-item nav-link menu-item">Sign up</a>
-            <a href="doctor_sign_up.html" class="nav-item nav-link menu-item">Sign up as a doctor</a>
             <a href="resources.html" class="nav-item nav-link menu-item">Extra resources</a>
             <a href="report.html" class="nav-item nav-link menu-item">Report a problem</a>
         </nav>
 
+        <div id = "chatbotBox">
+            <h6 style="font-size: 3vh; margin: 0 auto;">Chatbot</h6>
+            <hr/>
+                <p id="chatlog6" class="chatlog">&nbsp;</p>
+                <p id="chatlog5" class="chatlog">&nbsp;</p>
+                <p id="chatlog4" class="chatlog">&nbsp;</p>
+                <p id="chatlog3" class="chatlog">&nbsp;</p>
+                <p id="chatlog2" class="chatlog">&nbsp;</p>
+                <p id="chatlog1" class="chatlog">&nbsp;</p>
+            <input type="text" name="question" id="question" placeholder="Ask any questions" style="position: relative; width: 80%; ">
+        </div>
+        <img id="chatbotButton" src="images/chatbot.png" style="width:5vw; height: 5vw;" onclick="showFunction()"/>
+
         <div id="main-text" class="window-height not-title">
             <img src= "images/haiyya.png" title="Source: Haiyya" style="width:30vw; position:absolute">
-            <p style="margin-top:4vh; margin-left:30vw">
+            <p style=" margin-left:30vw">
                 In India, sexual and reproductive health is centered around maternal care. In fact, the only time when most women have 
                 ever visited a gynecologist is when they are pregnant. Unmarried women are even more judged and shamed for their 
                 sexuality. <br/> A survey <a href="http://www.haiyya.in/our-works/health-over-stigma/">Health Over Stigma</a> conducted by the
@@ -109,5 +133,31 @@
             ***video***
             </p>
         </div>-->
+        <footer>
+            <img src="images/logo.jpeg" alt = "logo" style="width: 10vw; height: 10vw;"/>
+            <div>
+                <h4>Selina Jeslyn Manua</h4>
+                <p><a href="https://github.com/selinajeslyn">selinajeslyn</a> @GitHub</p>
+                <p><a href="https://id.linkedin.com/in/selina-jeslyn-manua-999592200">selina-jeslyn-manua-999592200</a> @LinkedIn</p>
+            </div>
+
+            <div>
+                <h4>Sonali Singh</h4>
+                <p><a href="https://github.com/sonali-singh97">sonali-singh97</a> @GitHub</p>
+                <p><a href="https://www.linkedin.com/in/sonali-singh20/">sonali-singh20</a> @LinkedIn</p>
+            </div>
+
+            <div>
+                <h4>Urvi Godha</h4>
+                <p><a href="https://github.com/urvigodha">urvigodha</a> @GitHub</p>
+                <p><a href="https://linkedin.com/in/urvigodha">urvigodha</a> @LinkedIn</p>
+            </div>
+
+            <div>
+                <h4>Veneta Kireva</h4>
+                <p><a href="https://github.com/veneta13">veneta13</a> @GitHub</p>
+                <p><a href="https://www.linkedin.com/in/venetak/">venetak</a> @LinkedIn</p>
+            </div>
+        </footer>
     </body>
 </html>

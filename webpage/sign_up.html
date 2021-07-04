@@ -12,33 +12,35 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="style/report_style.css"
+        <link rel="stylesheet" href="style/sign_up_style.css"
+
     </head>
-    
     <body>
         <nav id = "navigation" class="col-md-12 nav nav-pills justify-content-center nav-fill sticky-top">
             <a href="main.html" class="nav-item nav-link menu-item">Home</a>
             <a href="find_a_doctor.html" class="nav-item nav-link menu-item">Find a gynecologist</a>
             <a href="review.html" class="nav-item nav-link menu-item">Review</a>
-            <a href="sign_up.html" class="nav-item nav-link menu-item">Sign up</a>
-            <a href="doctor_sign_up.html" class="nav-item nav-link menu-item">Sign up as a doctor</a>
+            <a href="#" class="nav-item nav-link menu-item current">Sign up</a>
             <a href="resources.html" class="nav-item nav-link menu-item">Extra resources</a>
-            <a href="#" class="nav-item nav-link menu-item current">Report a problem</a>
+            <a href="report.html" class="nav-item nav-link menu-item">Report a problem</a>
         </nav>
 
-        <div id="report-form" class="centered-box">
-            <form id="report-form">
+        <div class="centered-box">
+            <form id="signup-form">
+                <label for="name"><b>Name</b></label> <br/>
+                <input type="text" placeholder="First and last name" name="name" required> <br/>
 
-                <label for="doctorName"><b>Doctor Name</b></label> <br/>
-                <input type="text" placeholder="Enter the name of the doctor you want to report about" name="doctorName" required> <br/>
+                <label for="email"><b>Email</b></label> <br/>
+                <input type="text" placeholder="yourmail@example.com" name="email" required> <br/>
 
-                <label for="issue"><b>Please describe the issue:</b></label> <br/>
-                <textarea id="issue" name="issue" rows="3" style="width:30vw" required>Write the description of the issue here
-                </textarea><br/>
+                <label for="password"><b>Password</b></label> <br/>
+                <input type="password" placeholder="********" name="password" required> <br/>
 
-                <button type="submit">Send Report</button>
-
+                <button type="submit">Sign Up</button>
+                <a href="log_in.html" style="margin-left: 20vw">Log In</a> <br/>
+                <a href="doctor_sign_up.html" style="color: #841934">Sign Up as a Doctor</a> 
             </form>
         </div>
+
     </body>
 </html>

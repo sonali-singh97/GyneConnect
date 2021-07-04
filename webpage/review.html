@@ -4,35 +4,50 @@
         <meta charset="UTF-8">
 
         <!--  Fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 
         <!--    Bootstrap    -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 
+        <!-- Styles -->
+        <link rel="stylesheet" href="style/review_style.css"
+
     </head>
     
     <body>
-        <div id="report-form">
+        <nav id = "navigation" class="col-md-12 nav nav-pills justify-content-center nav-fill sticky-top">
+            <a href="main.html" class="nav-item nav-link menu-item">Home</a>
+            <a href="find_a_doctor.html" class="nav-item nav-link menu-item">Find a gynecologist</a>
+            <a href="#" class="nav-item nav-link menu-item current">Review</a>
+            <a href="sign_up.html" class="nav-item nav-link menu-item">Sign up</a>
+            <a href="doctor_sign_up.html" class="nav-item nav-link menu-item">Sign up as a doctor</a>
+            <a href="resources.html" class="nav-item nav-link menu-item">Extra resources</a>
+            <a href="report.html" class="nav-item nav-link menu-item">Report a problem</a>
+        </nav>
+
+        <div id="report-form" class="centered-box">
             <form id="report-form">
 
-                <label for="doctor-name"><b>Doctor Name</b></label>
-                <input type="text" placeholder="Enter the name of your doctor" name="doctor-name" required>
+                <label for="doctorName"><b>Doctor Name</b></label> <br/>
+                <input type="text" placeholder="Enter the name of your doctor" name="doctorName" required> <br/>
 
-                <label for="doctor-name"><b>Please enter your email to receive the status of your review</b></label>
-                <input name="email" type="email" placeholder="yourmail@example.com">
+                <label for="email"><b>Please enter your email to receive the status of your review</b></label> <br/>
+                <input name="email" type="email" placeholder="yourmail@example.com"> <br/>
 
-                <label for="rate"><b>Please rate your doctor:</b></label>
+                <label for="rate"><b>Please rate your doctor:</b></label> <br/>
                 <select id="rate" required>
-                    <option value="bad">1</option>
-                    <option value="poor">2</option>
-                    <option value="fair">3</option>
-                    <option value="good">4</option>
-                    <option value="excellent">5</option>
-                </select>
+                    <option value="bad">⭐</option>
+                    <option value="poor">⭐⭐</option>
+                    <option value="fair">⭐⭐⭐</option>
+                    <option value="good">⭐⭐⭐⭐</option>
+                    <option value="excellent">⭐⭐⭐⭐⭐</option>
+                </select> <br/>
 
-                <label for="review">Additional comments:</label>
-                <textarea id="review" name="review" rows="5"> 
-                    Please tell us about your experience
-                </textarea>
+                <label for="review"><b>Additional comments:</b></label> <br/>
+                <textarea id="review" name="review" rows="3" style="width:30vw">Please tell us about your experience
+                </textarea> <br/>
                 <button type="submit">Send Review</button>
 
             </form>

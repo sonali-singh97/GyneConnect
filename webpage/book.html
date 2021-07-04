@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!--  Fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+        <!--    Bootstrap    -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="style/book_style.css"
+
+    </head>
+    <body>
+        <nav id = "navigation" class="col-md-12 nav nav-pills justify-content-center nav-fill sticky-top">
+            <a href="main.html" class="nav-item nav-link menu-item">Home</a>
+            <a href="#" class="nav-item nav-link menu-item current">Find a gynecologist</a>
+            <a href="review.html" class="nav-item nav-link menu-item">Review</a>
+            <a href="sign_up.html" class="nav-item nav-link menu-item">Sign up</a>
+            <a href="resources.html" class="nav-item nav-link menu-item">Extra resources</a>
+            <a href="report.html" class="nav-item nav-link menu-item">Report a problem</a>
+        </nav>
+
+        <div id="status">
+        <h4>Status:</h4>
+        <p>Here you can see the status of your appointment.</p>
+        </div>
+
+        <div id="selectors">
+            <form id = "book_appointment" >
+                <div class="appointment-type">
+                    <h4>Choose the type of consultation you would like to book:</h4>
+                    <input type="radio" name="meetType" value="online" id="online"><label for="online">Online Consultation</label>
+                    <input type="radio" name="meetType" value="offline" id="offline"><label for="offline">In-person Consultation</label>
+                </div>
+
+                <div class="date">
+                    <h4>Choose a date for the consultation:</h4>
+                    <input type="radio" name="date" value="date1" id = "date1"><label for="date1">Date</label>
+                    <input type="radio" name="date" value="date2" id = "date2"><label for="date2">Date</label>
+                </div>
+
+                <div class="time">
+                    <h4>Choose a time for the consultation:</h4>
+                    <input type="radio" name="time" value="time1" id = "time1"><label for="time1">Time</label>
+                    <input type="radio" name="time" value="time2" id = "time2"><label for="time2">Time</label>
+                </div>
+
+                <button type="submit">Book</button>
+            </form>
+        </div>
+    </body>
+</html>

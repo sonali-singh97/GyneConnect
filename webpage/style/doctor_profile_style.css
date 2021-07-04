@@ -9,7 +9,7 @@
 body{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 3vh;
-    background-color: #E1DABD;
+    background-color: #FFE4FA;
 }
 
 #profile {
@@ -23,6 +23,7 @@ body{
 
 nav {
     position: absolute;
+    background-color:#FFE4FA;
 }
 
 a {
@@ -38,6 +39,7 @@ img {
     height: 16vw;
     width: 16vw;
     text-align: center;
+    border: 4px dotted #841934;
 }
 
 input { 
@@ -52,6 +54,5 @@ button {
 }
 
 button:hover {
-    color: #841934;
-    
+    color: #841934;    
 }

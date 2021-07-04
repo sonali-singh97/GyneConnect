@@ -24,7 +24,7 @@ nav {
 }
 
 a {
-    color: black;
+    color: #841934;
 }
 
 a:hover {
@@ -38,7 +38,7 @@ a:hover {
 #title{
     font-family: 'Brittany Signature Regular';
     font-size: 10vh;
-    color: #FFC4EB;
+    color: #841934;
 }
 
 .title{
@@ -69,6 +69,42 @@ input{
 }
 
 .profile {
-    background-color: #E1DABD;
+    background-color: #FFE4FA;
     border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #841934;
+    margin: 3vh;
+    padding: 3vh;
+}
+
+.profile-image{
+    border-radius:50%;
+    width: 30%;
+    border: 4px dotted #841934;
+    margin-bottom: 2vh;
+}
+
+.profile a{
+    background-color: #FFE4FA;
+    border: 2px double #841934;
+    text-transform:uppercase;
+    width: 50%;
+    border-radius: 10px;
+    padding: 1vh;
+}
+
+.profile a:hover{
+    background-color: white;
+    border: 2px double #841934;
+    text-transform:uppercase;
+    text-decoration: none;
+    width: 50%;
+    border-radius: 10px;
+}
+
+h3{
+    font-family: 'Brittany Signature Regular';
+    color: #841934;
+    text-shadow: 0 1px;
 }

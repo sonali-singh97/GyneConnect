@@ -28,7 +28,7 @@
     </div>
 
     <div style="margin-top: 4vh; margin-bottom: 4vh;">
-        <form action="http://localhost:3000/search-doctor" method="POST" id="find-a-gynecologist-form">
+        <form action="https://gyne-connect.herokuapp.com/search-doctor" method="POST" id="find-a-gynecologist-form">
             <label for="city">Please enter doctor name or city:</label>
             <input type="text" id="city" name="input"><br>
         </form>
@@ -43,9 +43,9 @@
             <img src=" <%- doctor.image %>" alt="profile image" class="profile-image" /><br />
             <h3 id="name"><%- doctor.fullName %></h3><br />
             <p id="numberReviews"><%- doctor.location%></p><br />
-            <p id="tags">
+            <p  id="tags">
                 <% doctor.tags.forEach(function(tag){ %>
-                <%- tag %>,
+               <span class="tag"> <%- tag %> </span>
                 <% }); %>
             </p>
             <a href="/doctor/<%- doctor._id %> " style="color: #841934">Learn more</a>

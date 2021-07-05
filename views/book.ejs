@@ -34,27 +34,27 @@
 
             <div class="date">
                 <h4>Choose a date for the consultation:</h4>
-                <% for(let i =5; i<=13 ; i++) { %>
-                <input style="cursor:pointer;" type="radio" name="date" value="date<%- i %>" id="date<%- i %>"><label for="date<%- i %>">
-                    <%- i %> July 2021</label>
-                <%  } %>
+                <% dates.forEach(date => { %>
+                <input style="cursor:pointer;" type="radio" name="date" value="<%- date %>" id="<%- date %>"><label for="<%- date %>">
+                    <%- date %> </label>
+                <%  }) %>
             </div>
 
             <div class="time">
                 <h4>Choose a time for the consultation:</h4>
                 <% for(let i =9; i<=16 ;i++ ) { %>
-                <input style="cursor:pointer;" type="radio" name="time" value="time<%- i %>0" id="time<%- i %>0"><label for="time<%- i %>0">
+                <input style="cursor:pointer;" type="radio" name="time" value="<%- i %>:00" id="time<%- i %>0"><label for="time<%- i %>0">
                     <%- i %>:00 </label>
-                <input style="cursor:pointer;" type="radio" name="time" value="time<%- i %>1" id="time<%- i %>1"><label for="time<%- i %>1">
+                <input style="cursor:pointer;" type="radio" name="time" value="<%- i %>:15" id="time<%- i %>1"><label for="time<%- i %>1">
                     <%- i %>:15 </label>
-                <input style="cursor:pointer;" type="radio" name="time" value="timetime<%- i %>2" id="time<%- i %>2"><label for="time<%- i %>2">
+                <input style="cursor:pointer;" type="radio" name="time" value="<%- i %>:30 " id="time<%- i %>2"><label for="time<%- i %>2">
                     <%- i %>:30 </label>
-                <input style="cursor:pointer;" type="radio" name="time" value="timetime<%- i %>2" id="time<%- i %>3"><label for="time<%- i %>3">
+                <input style="cursor:pointer;" type="radio" name="time" value=" <%- i %>:45" id="time<%- i %>3"><label for="time<%- i %>3">
                     <%- i %>:45 </label>
                 <%  } %>
             </div>
 
-            <button type="submit">Book</button>
+            <a href="/" style="color: #841934">Book</a>
         </form>
     </div>
     </body>

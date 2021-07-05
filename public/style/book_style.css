@@ -122,6 +122,9 @@ button {
     border: 0px;
 }
 
+a {
+    font-family: 'Brittany Signature Regular';
+}
 #status h4{
     font-family: 'Brittany Signature Regular';
 }

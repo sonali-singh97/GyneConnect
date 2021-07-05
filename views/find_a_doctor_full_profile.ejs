@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Find Out More</title>
 
-        <!--  Fonts  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Out More</title>
 
-        <!--    Bootstrap    -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!--  Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="/style/full_profile_style.css"
+    <!--    Bootstrap    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-    </head>
-    <body>
-        <%-include("navbar")-%>
-        <div id="profile">
-            <img src="<%- doctor.image %>" alt="Profile picture"/><br/>
-            <h2 id="name"><b>Full Name : </b><%- doctor.fullName %></h2> <br/>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style/full_profile_style.css" </head> <body>
+    <%-include("navbar")-%>
+    <div id="profile">
+        <img src="<%- doctor.image %>" alt="Profile picture" /><br />
+        <h2 id="name"><b>Full Name : </b><%- doctor.fullName %></h2> <br />
 
-            <p id="hospitalName"><b>Hospital Name: </b><%- doctor.hospitalName %></p> <br/>
+        <% if(!doctor.email.startsWith("null")) {%>
+        <p id="fee"><b>Email: </b> <%- doctor.email %></p> <br />
+        <% } %>
 
-            <p id="hospitalName"><b>Office Hours: </b><%- doctor.officeHours %></p> <br/>
+        <% if(doctor.hospitalName) {%>
+        <p id="hospitalName"><b>Hospital Name: </b><%- doctor.hospitalName %></p> <br />
+        <% } %>
 
-            <p id="gender"><b>Gender : </b><%- doctor.gender %></p> <br/>
+        <% if(doctor.officeHours) {%>
+            <p id="officeHrs"><b>Office Hours: </b><%- doctor.officeHours %></p> <br /> 
+        <% } %>
 
-            <p id="location"><b>Location; <%- doctor.location %></p> <br/>
+        <% if(doctor.gender) {%>
+            <p id="gender"><b>Gender : </b><%- doctor.gender %></p> <br />
+        <% } %>
 
-            <p id="phone"><b>Phone number: </b> <%- doctor.phone%></p> <br/>
+        <% if(doctor.location) {%>
+            <p id="location"><b>Location:</b> <%- doctor.location %></p> <br /> 
+        <% } %>
 
-            <p id="website"><b> Address: </b> <%- doctor.address %> </p> <br/>
-                
-            <p id="fee"><b>Consultation fee: </b> <%- doctor.fees %></p> <br/>
+        <% if(doctor.phone) {%>
+            <p id="phone"><b>Phone number: </b> <%- doctor.phone%></p> <br /> 
+        <% } %>
 
-            <a href="/book" style="color: #841934; font-family:'Brittany Signature Regular'">Book an Appointment</a> 
-        </div>
+        <% if(doctor.address) {%>
+            <p id="website"><b> Address: </b> <%- doctor.address %> </p> <br /> 
+        <% } %>
+
+        <% if(doctor.fees) {%> 
+            <p id="fee"><b>Consultation fee: </b> <%- doctor.fees %></p> <br /> 
+        <% } %>
+
+        <% if(doctor.reviews[0]) {%> 
+            <p id="fee"><b>Review: </b> <%- doctor.reviews %></p> <br />
+         <% } %>
+
+        <a href="/book" style="color: #841934; font-family:'Brittany Signature Regular'">Book an Appointment</a>
+    </div>
 
     </body>
+
 </html>

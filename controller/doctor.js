@@ -102,7 +102,6 @@ const getProfile = asyncHandler(async (req, res) => {
 });
 
 const findNearbyDoctor = asyncHandler(async (req, res) => {
-    console.log(req.body.input)
     const doctors = await Doctor.find({})
     const tokens = req.body.input
         .toLowerCase()
@@ -112,7 +111,6 @@ const findNearbyDoctor = asyncHandler(async (req, res) => {
         })
 
     const searchTermRegex = new RegExp(tokens.join('|'), 'gim')
-
     const doctorsArray = doctors.map(
         (ele) => `${ele.fullName } ${ele.location} ${ele.tags.join(' ')}  ${ele.address} ${ele.hospitalName} `,
     )
@@ -121,7 +119,6 @@ const findNearbyDoctor = asyncHandler(async (req, res) => {
            return ele
         
     })
-    console.log(filteredList)
     res.render('find_a_doctor', {
         doctors : filteredList
     })
